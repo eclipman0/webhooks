@@ -13,7 +13,7 @@ app.get('/webhooks', (req, res) => {
 app.post('/webhooks', (req, res) => {
     res.status(200).send(req.body.object);
     console.log('post request')
-    console.log(req.body);
+    console.log(JSON.stringify(req.body));
     
 });
 
