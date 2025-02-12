@@ -7,7 +7,8 @@ app.use(express.json({ type: ['application/json', 'application/csp-report'] }));
 app.get('/webhooks', (req, res) => {
     const hubChallenge = req.query['hub.challenge'];
     res.send(hubChallenge);
-    // res.send('Hello World!')
+    console.log('get request')
+    console.log(JSON.stringify(req.body));
 });
 
 app.post('/webhooks', (req, res) => {
